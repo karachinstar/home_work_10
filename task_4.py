@@ -8,3 +8,10 @@
 Подсказки:
 --- используйте списки и циклы, не дублируйте функции
 """
+
+list_str = ['разработка', 'администрирование', 'protocol', 'standard']
+for s in list_str:
+    temp_enc = s.encode('utf-8')
+    print(f'"{s}": \n в байтовом формате:\n {temp_enc}')
+    temp_dec = temp_enc.decode('utf-8')
+    print(f' в строковом формате:\n {temp_dec}')
