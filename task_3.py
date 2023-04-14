@@ -9,3 +9,15 @@
 --- обязательно!!! усложните задачу, "отловив" исключение,
 придумайте как это сделать
 """
+
+list_str = ['attribute', 'класс', 'функция', 'type']
+for i in list_str:
+    temp = bytes(i, 'UTF-8')
+    try:
+        if len(i) != len(temp):
+            raise ValueError
+    except ValueError:
+        print(f"'{i}' не возможно записать с помощью "
+              f"маркировки b''.")
+    else:
+        print(f"'{i}', в байтовом формате - {temp}.")
